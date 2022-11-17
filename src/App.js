@@ -1,25 +1,20 @@
-import logo from './logo.svg';
+import React, { useState } from 'react'
 import './App.css';
+import Card from './components/Card/Card';
+import Vector from "./images/Vector.png"
 
-function App() {
+const App = () => {
+  const [state, setstate] = useState(false);
+  const handleShareClick=()=>{
+    setstate(!state)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div  className='App'>
+      <div className='share-text'>Click On Share Button</div>
+      <button onClick={handleShareClick} className='share-btn'>Share <img src={Vector} alt="share-icon"/></button>
+      {state && <Card/>}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
