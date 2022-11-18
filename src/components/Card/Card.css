@@ -223,13 +223,13 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 8px 12px;
+  padding: 8px 12px !important;
   gap: 10px;
   width: 512px;
   height: 48px;
-  background: #f9fafb;
-  border-top: 1px solid #e5e7eb;
-  border-radius: 0px 0px 8px 8px;
+  background: #f9fafb !important;
+  border-top: 1px solid #e5e7eb !important;
+  border-radius: 0px 0px 8px 8px I !important;
   flex: none;
   order: 1;
   flex-grow: 0;
@@ -264,6 +264,7 @@ input:checked + .slider:before {
   flex: none;
   order: 1;
   flex-grow: 0;
+  margin-bottom: 0;
 }
 .card-footer-text-p {
   font-family: "Inter";
@@ -275,4 +276,5 @@ input:checked + .slider:before {
   flex: none;
   order: 1;
   flex-grow: 0;
+  margin-bottom: 0;
 }
